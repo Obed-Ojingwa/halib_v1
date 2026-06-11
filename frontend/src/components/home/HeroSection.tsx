@@ -1,8 +1,8 @@
 // C:\Users\Melody\Documents\haliberrycake\frontend\src\components\home\HeroSection.tsx
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Cake, Star, BookOpen } from 'lucide-react'
-import { heroTextReveal, imageFloat } from '@/lib/animations'
+import { ArrowRight, Cake, Star, BookOpen, Sparkles, Heart } from 'lucide-react'
+import { heroTextReveal, imageFloat, floatSlow } from '@/lib/animations'
 
 export default function HeroSection() {
   return (
@@ -42,7 +42,7 @@ export default function HeroSection() {
       <motion.div
         className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[200px] h-[150px] opacity-[0.08] hidden lg:block"
         style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 100 50\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M5,45 Q15,35 25,40 T45,45 Q55,35 65,40 T85,45 Q95,35 95,25 L95,5 L5,5 Z\' fill=\'none\' stroke=\'%23D4A373\' stroke-width=\'1.5\' opacity=\'0.3\'/%3E%3C/svg%3E')",
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 100 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5,45 Q15,35 25,40 T45,45 Q55,35 65,40 T85,45 Q95,35 95,25 L95,5 L5,5 Z' fill='none' stroke='%23D4A373' stroke-width='1.5' opacity='0.3'/%3E%3C/svg%3E\")",
           pointerEvents: 'none'
         }}
         variants={floatSlow}
