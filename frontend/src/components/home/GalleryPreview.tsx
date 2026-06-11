@@ -7,17 +7,18 @@ import { galleryApi } from '@/lib/api'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import type { GalleryItem } from '@/types'
 
-// Fallback gradients used when image_url is null or image fails to load
+// Elegant fallback gradients for when images aren't available
 const FALLBACK_GRADIENTS = [
-  'white',
-  'white',
-  'white',
-  'white',
-  'white',
+  'linear-gradient(135deg, rgba(248,244,240,0.8) 0%, rgba(255,255,255,0.9) 100%)',
+  'linear-gradient(135deg, rgba(255,248,245,0.8) 0%, rgba(255,255,255,0.9) 100%)',
+  'linear-gradient(135deg, rgba(245,248,250,0.8) 0%, rgba(255,255,255,0.9) 100%)',
+  'linear-gradient(135deg, rgba(250,245,240,0.8) 0%, rgba(255,255,255,0.9) 100%)',
+  'linear-gradient(135deg, rgba(248,244,240,0.8) 0%, rgba(255,255,255,0.9) 100%)',
+  'linear-gradient(135deg, rgba(255,250,240,0.8) 0%, rgba(255,255,255,0.9) 100%)'
 ]
 
 // Grid span classes — mirrors the original layout
-const SPAN_CLASSES = ['row-span-2', '', '', 'col-span-2', '']
+const SPAN_CLASSES = ['row-span-2', '', '', 'col-span-2', '', '']
 
 export default function GalleryPreview() {
   const { data } = useQuery<GalleryItem[]>({
@@ -30,40 +31,82 @@ export default function GalleryPreview() {
     staleTime: 1000 * 60 * 10, // 10 min cache — gallery changes infrequently
   })
 
-  // Use up to 5 items; pad with null placeholders so layout never breaks
-  const raw = Array.isArray(data) ? data.slice(0, 5) : []
-  const items: (GalleryItem | null)[] = [...raw, ...Array(Math.max(0, 5 - raw.length)).fill(null)]
+  // Use up to 6 items for a more luxurious feel; pad with null placeholders so layout never breaks
+  const raw = Array.isArray(data) ? data.slice(0, 6) : []
+  const items: (GalleryItem | null)[] = [...raw, ...Array(Math.max(0, 6 - raw.length)).fill(null)]
 
   return (
-    <section className="py-8 lg:py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-10 lg:py-20 overflow-hidden" style={{
+      background: 'linear-gradient(180deg, var(--cream-white) 0%, var(--cream) 100%)'
+    }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-[160px] h-[160px] rounded-full opacity-[0.06] hidden lg:block"
+             style={{
+               background: 'radial-gradient(circle at 30% 30%, rgba(212,163,115,0.1), transparent 70%)',
+               transform: 'translate(-20%, -20%)'
+             }}
+             variants={floatSlow}
+             initial="rest"
+             animate="float"
+             transition={{ delay: 0.5 }}
+        />
+        <div className="absolute bottom-0 right-0 w-[140px] h-[140px] rounded-full opacity-[0.04] hidden lg:block"
+             style={{
+               background: 'radial-gradient(circle at 70% 70%, rgba(248,169,116,0.08), transparent 70%)',
+               transform: 'translate(20%, 20%)'
+             }}
+             variants={floatSlow}
+             initial="rest"
+             animate="float"
+             transition={{ delay: 1.2 }}
+        />
 
         {/* Header */}
         <motion.div
-          className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 mb-12"
+          className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8 mb-16"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <div>
-            <motion.span variants={fadeUp} className="section-eyebrow block mb-3">Our Gallery</motion.span>
+            <motion.span variants={fadeUp} className="section-eyebrow block mb-3">
+              Our Gallery
+            </motion.span>
             <motion.h2 variants={fadeUp} className="section-title">
               Crafted with
-              <em className="not-italic" style={{ color: 'var(--peach)' }}> Love</em>
+              <em className="not-italic" style={{
+                color: 'var(--peach)',
+                fontSize: '1.1rem'
+              }}> Love & Artistry</em>
             </motion.h2>
           </div>
           <motion.div variants={fadeUp}>
-            <Link to="/gallery" className="btn-outline text-sm">
-              View All
-              <ArrowRight size={15} />
+            <Link to="/gallery" className="btn-outline">
+              View Full Gallery
+              <ArrowRight size={16} />
             </Link>
           </motion.div>
         </motion.div>
 
-        {/* Masonry-style grid */}
+        {/* Elegant decorative divider */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px]"
+          className="flex items-center gap-6 mb-12"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="w-[50px] h-[1px] bg-[var(--peach)]/25" />
+          <span className="font-serif text-[var(--peach)] text-lg">✦ ✦ ✦</span>
+          <div className="w-[50px] h-[1px] bg-[var(--peach)]/25" />
+        </motion.div>
+
+        {/* Masonry-style grid - More spacious and elegant */}
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[220px]"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -76,12 +119,15 @@ export default function GalleryPreview() {
 
             return (
               <motion.div
-                key={item?.id ?? `placeholder-${index}`}
+                key={item?.id ?? `gallery-${index}`}
                 variants={fadeUp}
-                className={`group relative rounded-2xl overflow-hidden cursor-pointer ${spanClass}`}
-                style={{ background: fallback }}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.35 }}
+                className={`group relative rounded-3xl overflow-hidden cursor-pointer ${spanClass}`}
+                style={{
+                  background: fallback,
+                  border: '1px solid rgba(212,163,115,0.1)'
+                }}
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.4 }}
               >
                 {/* Real image — shown on top of gradient if available */}
                 {item?.image_url && (
@@ -94,19 +140,31 @@ export default function GalleryPreview() {
                   />
                 )}
 
-                {/* Hover overlay */}
+                {/* Elegant hover overlay */}
                 <div
-                  className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
-                  style={{ background: 'rgba(0,0,0,0.55)' }}
+                  className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-400"
+                  style={{
+                    background: 'rgba(255,255,255,0.1)',
+                    backdropFilter: 'blur(5px)',
+                    border: '1px solid rgba(212,163,115,0.2)'
+                  }}
                 >
-                  <Instagram size={22} color="white" className="mb-2" />
-                  <p className="font-sans text-xs text-white tracking-wide">{label}</p>
+                  <div className="flex flex-col items-center">
+                    <Instagram size={24} color="white" className="mb-3" />
+                    <p className="font-sans text-xs font-medium text-white tracking-wide">{label}</p>
+                    <Heart size={14} color="white" className="mt-3" style={{ opacity: 0.7 }} />
+                  </div>
                 </div>
 
-                {/* Label pill */}
+                {/* Label pill - More refined */}
                 <div
-                  className="absolute bottom-3 left-3 font-sans text-xs font-medium px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ background: 'rgba(255,255,255,0.9)', color: 'var(--text-secondary)' }}
+                  className="absolute bottom-4 left-4 font-sans text-xs font-medium px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background: 'rgba(255,255,255,0.85)',
+                    backdropFilter: 'blur(5px)',
+                    border: '1px solid rgba(212,163,115,0.15)',
+                    color: 'var(--text-secondary)'
+                  }}
                 >
                   {label}
                 </div>
@@ -115,9 +173,9 @@ export default function GalleryPreview() {
           })}
         </motion.div>
 
-        {/* Instagram CTA */}
+        {/* Instagram CTA - Enhanced */}
         <motion.div
-          className="text-center mt-12"
+          className="text-center mt-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -127,11 +185,17 @@ export default function GalleryPreview() {
             href="https://instagram.com/haliberrycake"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-sans text-sm font-medium transition-colors hover:text-[var(--peach)]"
-            style={{ color: 'var(--text-secondary)' }}
+            className="inline-flex items-center gap-3 font-sans text-sm font-medium transition-colors hover:text-[var(--peach)]"
+            style={{
+              color: 'var(--text-secondary)',
+              background: 'rgba(212,163,115,0.08)',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '12px',
+              border: '1px solid rgba(212,163,115,0.2)'
+            }}
           >
-            <Instagram size={18} />
-            Follow @haliberrycake on Instagram
+            <Instagram size={20} />
+            <span>Follow @haliberrycake on Instagram</span>
             <ArrowRight size={14} />
           </a>
         </motion.div>
