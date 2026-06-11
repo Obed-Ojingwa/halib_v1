@@ -52,3 +52,12 @@ export const imageFloat: Variants = {
     transition: { duration: 6, repeat: Infinity, ease: 'easeInOut' },
   },
 }
+
+export const floatSlow: Variants = {
+  rest: { y: 0, rotate: 0 },
+  float: {
+    y: [-15, 0, -15],
+    rotate: [-3, 0, -3],
+    transition: { duration: 8, repeat: Infinity, ease: 'easeInOut' },
+  },
+}
