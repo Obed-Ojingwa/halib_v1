@@ -190,6 +190,8 @@ export default function FounderSection() {
 
         </div>
 
+        </div>
+
         {/* Bottom decorative flourish */}
         <motion.div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[160px] h-[100px] opacity-[0.05] hidden lg:block"
@@ -201,6 +203,7 @@ export default function FounderSection() {
           animate="float"
           transition={{ delay: 0.8 }}
         />
+    </div>
     </section>
   )
 }
