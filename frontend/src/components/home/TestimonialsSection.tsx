@@ -8,28 +8,28 @@ const TESTIMONIALS = [
     quote: 'Haliberry Cake made our wedding cake unforgettable—the design and flavor were perfect.',
     name: 'Avery M.',
     role: 'Bride',
-    image: '/testimonials/avery.jpg'
+    image: '/test.jpg'
   },
   {
     id: '2',
     quote: 'The baking class was fun, informative, and full of delicious samples.',
     name: 'Jordan L.',
     role: 'Home Baker',
-    image: '/testimonials/jordan.jpg'
+    image: '/testim.jpg'
   },
   {
     id: '3',
     quote: 'Such warm customer service and incredible attention to every detail.',
     name: 'Sofie P.',
     role: 'Event Planner',
-    image: '/testimonials/sofie.jpg'
+    image: '/testi.webp'
   },
   {
     id: '4',
     quote: 'Every bite tells a story of passion and precision. Simply heavenly!',
     name: 'Elena R.',
     role: 'Food Critic',
-    image: '/testimonials/elena.jpg'
+    image: '/testimo.webp'
   }
 ]
 
@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
         <motion.div
           className="absolute top-0 left-0 w-[180px] h-[180px] rounded-full opacity-[0.08] hidden lg:block"
           style={{
-            background: 'radial-gradient(circle at 30% 30%, rgba(149,113,88,0.15), transparent 70%)',
+            background: 'radial-gradient(circle at 30% 30%, rgba(168,144,128,0.15), transparent 70%)',
             transform: 'translate(-20%, -20%)'
           }}
           variants={floatSlow}
@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
         <motion.div
           className="absolute bottom-0 right-0 w-[200px] h-[200px] rounded-full opacity-[0.06] hidden lg:block"
           style={{
-            background: 'radial-gradient(circle at 70% 70%, rgba(149,113,88,0.12), transparent 70%)',
+            background: 'radial-gradient(circle at 70% 70%, rgba(168,144,128,0.12), transparent 70%)',
             transform: 'translate(20%, 20%)'
           }}
           variants={floatSlow}
@@ -98,14 +98,14 @@ export default function TestimonialsSection() {
               {/* Testimonial Card */}
               <div className="relative bg-white rounded-2xl p-8 shadow-luxury transition-all duration-500 hover:shadow-luxury-lg"
                    style={{
-                     border: '1px solid rgba(149,113,88,0.15)',
-                     background: 'linear-gradient(to bottom right, white, rgba(248,244,240,0.8))'
+                     border: '1px solid rgba(168,144,128,0.15)',
+                     background: 'linear-gradient(to bottom right, white, rgba(250,248,246,0.8))'
                    }}
               >
                 {/* Quote Icon */}
                 <div className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full"
                      style={{
-                       background: 'rgba(149,113,88,0.1)',
+                       background: 'rgba(168,144,128,0.1)',
                        color: 'var(--peach)'
                      }}>
                   <Quote size={16} />
@@ -122,8 +122,8 @@ export default function TestimonialsSection() {
                   ) : (
                     <div className="w-24 h-24 rounded-full flex items-center justify-center"
                          style={{
-                           background: 'linear-gradient(135deg, rgba(149,113,88,0.1) 0%, rgba(149,113,88,0.05) 100%)',
-                           border: '2px dashed rgba(149,113,88,0.3)'
+                           background: 'linear-gradient(135deg, rgba(168,144,128,0.1) 0%, rgba(212,169,160,0.05) 100%)',
+                           border: '2px dashed rgba(168,144,128,0.3)'
                          }}>
                       <Heart size={18} style={{ color: 'var(--peach)', opacity: 0.8 }} />
                     </div>
@@ -150,7 +150,7 @@ export default function TestimonialsSection() {
               <motion.div
                 className="absolute -top-4 -left-4 w-8 h-8 rounded-full"
                 style={{
-                  background: 'linear-gradient(135deg, var(--peach) 0%, rgba(149,113,88,0.3) 100%)',
+                  background: 'linear-gradient(135deg, var(--peach) 0%, rgba(168,144,128,0.3) 100%)',
                   transform: 'rotate(45deg)',
                   opacity: '0.7'
                 }}

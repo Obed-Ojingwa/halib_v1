@@ -43,16 +43,16 @@ export default function CICImpactSection() {
             >
               Healing &amp; Empowerment
               <br />
-              <em className="not-italic" style={{ color: 'var(--peach)' }}>Healing & Empowerment</em>
+              <em className="not-italic" style={{ color: 'var(--peach)' }}>❤️ Supporting Women</em>
             </motion.h2>
 
-            <motion.p variants={fadeLeft} className="font-sans font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem' }}>
+            <motion.p variants={fadeLeft} className="font-sans font-light leading-relaxed" style={{ color: 'var(--text-secondary)', fontSize: '1.05rem' }}>
               Haliberry CIC is our Community Interest Company — a sister organisation born from
               the belief that creativity and baking can be transformative tools for healing,
               confidence-building, and economic independence for women facing adversity in London.
             </motion.p>
 
-            <motion.p variants={fadeLeft} className="font-sans font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.95rem' }}>
+            <motion.p variants={fadeLeft} className="font-sans font-light leading-relaxed" style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>
               Through subsidised baking classes, mentorship, and community programmes, we work
               with domestic abuse survivors, women in recovery, and marginalised communities — 
               helping them find their voice, their confidence, and sometimes, their livelihood.
@@ -80,27 +80,27 @@ export default function CICImpactSection() {
                 variants={fadeRight}
                 className="flex flex-col p-7 rounded-2xl"
                 style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.1)',
+                  background: 'rgba(168,144,128,0.08)',
+                  border: '1px solid rgba(168,144,128,0.15)',
                   backdropFilter: 'blur(8px)',
                 }}
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
-                  style={{ background: 'rgba(149,113,88,0.15)' }}
+                  style={{ background: 'rgba(168,144,128,0.15)' }}
                 >
                   <span style={{ color: 'var(--peach)' }}>{icon}</span>
                 </div>
                 <p
                   className="font-serif font-bold mb-1"
-                  style={{ fontSize: '2.5rem', color: 'white', lineHeight: '1' }}
+                  style={{ fontSize: '2.5rem', color: 'var(--chocolate)', lineHeight: '1' }}
                 >
                   {value}
                 </p>
-                <p className="font-sans text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                <p className="font-sans text-sm" style={{ color: 'var(--text-secondary)' }}>
                   {label}
                 </p>
-                <p className="font-sans text-xs" style={{ color: 'rgba(255,255,255,0.4)', marginTop: '0.5rem' }}>
+                <p className="font-sans text-xs" style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>
                   {description}
                 </p>
               </motion.div>

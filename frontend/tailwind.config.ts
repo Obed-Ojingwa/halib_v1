@@ -10,35 +10,40 @@ const config: Config = {
     extend: {
       colors: {
         peach: {
-          DEFAULT: '#957158',
-          light: '#C5A68C',
-          dark: '#7A5B41',
+          DEFAULT: '#A89080',      /* Warm taupe - friendly primary */
+          light: '#C9A876',        /* Gold - luxury accent */
+          dark: '#3D2817',         /* Deep chocolate - sophisticated */
         },
-        apricot: '#D8B9A4',
+        apricot: '#D4A9A0',        /* Blush rose - feminine */
         blush: {
-          DEFAULT: '#E7C9B8',
+          DEFAULT: '#D4A9A0',
           light: '#F4E6DC',
-          dark: '#D4B49E',
+          dark: '#C4988F',
         },
         golden: {
-          DEFAULT: '#B39A7F',
-          dark: '#8F785F',
+          DEFAULT: '#C9A876',      /* Warm gold */
+          dark: '#B5926A',
         },
         cream: {
-          DEFAULT: '#F5EFE8',
-          dark: '#DED3CA',
+          DEFAULT: '#F9F7F4',      /* Premium cream */
+          dark: '#F0E8E3',
+        },
+        chocolate: {
+          DEFAULT: '#3D2817',      /* Deep chocolate brown */
+          light: '#5F5A54',
+          lighter: '#A89080',
         },
         brand: {
-          50:  '#F9F6F1',
-          100: '#F5EFE8',
-          200: '#E9E0D8',
-          300: '#D8B9A4',
-          400: '#C5A68C',
-          500: '#957158',
-          600: '#7A5B41',
-          700: '#6A4F3B',
-          800: '#58463A',
-          900: '#3F3126',
+          50:  '#FAF8F6',          /* Ivory */
+          100: '#F9F7F4',          /* Premium cream */
+          200: '#F0E8E3',          /* Sand */
+          300: '#D4A9A0',          /* Blush rose */
+          400: '#C9A876',          /* Gold */
+          500: '#A89080',          /* Taupe */
+          600: '#8A8178',          /* Muted */
+          700: '#5F5A54',          /* Secondary text */
+          800: '#3D2817',          /* Deep chocolate */
+          900: '#2D2620',          /* Text primary */
         },
       },
       fontFamily: {
@@ -62,18 +67,18 @@ const config: Config = {
         '5xl': '3rem',
       },
       boxShadow: {
-        'luxury': '0 8px 40px rgba(149, 113, 88, 0.16), 0 2px 10px rgba(42, 34, 28, 0.06)',
-        'luxury-lg': '0 20px 60px rgba(149, 113, 88, 0.2), 0 4px 20px rgba(42, 34, 28, 0.08)',
-        'luxury-sm': '0 4px 20px rgba(149, 113, 88, 0.12), 0 1px 6px rgba(42, 34, 28, 0.05)',
-        'blush': '0 8px 40px rgba(231, 201, 184, 0.2)',
+        'luxury': '0 8px 40px rgba(61, 40, 23, 0.12), 0 2px 10px rgba(45, 38, 32, 0.06)',
+        'luxury-lg': '0 20px 60px rgba(61, 40, 23, 0.16), 0 4px 20px rgba(45, 38, 32, 0.08)',
+        'luxury-sm': '0 4px 20px rgba(61, 40, 23, 0.10), 0 1px 6px rgba(45, 38, 32, 0.05)',
+        'blush': '0 8px 40px rgba(212, 169, 160, 0.2)',
         'inner-soft': 'inset 0 2px 8px rgba(0,0,0,0.04)',
       },
       backgroundImage: {
-        'gradient-hero': 'linear-gradient(135deg, #F9F6F1 0%, #E9E0D8 40%, #D8B9A4 100%)',
-        'gradient-peach': 'linear-gradient(180deg, #F9F6F1 0%, #E9E0D8 100%)',
-        'gradient-warm': 'linear-gradient(135deg, #F5EFE8 0%, #D8B9A4 50%, #B39A7F 100%)',
-        'gradient-cream': 'linear-gradient(180deg, #F9F6F1 0%, #F5EFE8 100%)',
-        'gradient-dark-overlay': 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(42, 34, 28, 0.55) 100%)',
+        'gradient-hero': 'linear-gradient(135deg, #FAF8F6 0%, #F9F7F4 40%, #F0E8E3 100%)',
+        'gradient-peach': 'linear-gradient(180deg, #FAF8F6 0%, #F9F7F4 100%)',
+        'gradient-warm': 'linear-gradient(135deg, #FAF8F6 0%, #D4A9A0 50%, #A89080 100%)',
+        'gradient-cream': 'linear-gradient(180deg, #FAF8F6 0%, #F9F7F4 100%)',
+        'gradient-dark-overlay': 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(45, 38, 32, 0.6) 100%)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

@@ -1,7 +1,7 @@
 // C:\Users\Melody\Documents\haliberrycake\frontend\src\components\home\HeroSection.tsx
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Cake, Star, BookOpen, Sparkles, Heart } from 'lucide-react'
+import { ArrowRight, Cake, Sparkles, Heart } from 'lucide-react'
 import { heroTextReveal, imageFloat, floatSlow } from '@/lib/animations'
 
 export default function HeroSection() {
@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section
   className="relative min-h-screen flex items-center overflow-hidden bg-[var(--cream)]"
   style={{
-    backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Ccircle fill=\'%23957158\' fill-opacity=\'0.05\' cx=\'30\' cy=\'30\' r=\'6\'/%3E%3Cpath d=\'M36 34q-4 0-6-3t-2-6q0-4 3-6t6-2q4 0 6 3t2 6q0 4-3 6t-6 2z\' fill=\'%23957158\' fill-opacity=\'0.05\'/%3E%3C/g%3E%3C/svg%3E")'
+    backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Ccircle fill=\'%23A89080\' fill-opacity=\'0.05\' cx=\'30\' cy=\'30\' r=\'6\'/%3E%3Cpath d=\'M36 34q-4 0-6-3t-2-6q0-4 3-6t6-2q4 0 6 3t2 6q0 4-3 6t-6 2z\' fill=\'%23A89080\' fill-opacity=\'0.05\'/%3E%3C/g%3E%3C/svg%3E")'
   }}
 >
 
@@ -28,7 +28,7 @@ export default function HeroSection() {
       <motion.div
         className="absolute top-1/6 left-[-5%] w-[300px] h-[400px] opacity-[0.15] hidden lg:block"
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(149,113,88,0.04) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at center, rgba(168,144,128,0.04) 0%, transparent 70%)',
           borderRadius: '50%',
           transform: 'rotate(-15deg)'
         }}
@@ -42,7 +42,7 @@ export default function HeroSection() {
       <motion.div
         className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[200px] h-[150px] opacity-[0.08] hidden lg:block"
         style={{
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 100 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5,45 Q15,35 25,40 T45,45 Q55,35 65,40 T85,45 Q95,35 95,25 L95,5 L5,5 Z' fill='none' stroke='%23957158' stroke-width='1.5' opacity='0.3'/%3E%3C/svg%3E\")",
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 100 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5,45 Q15,35 25,40 T45,45 Q55,35 65,40 T85,45 Q95,35 95,25 L95,5 L5,5 Z' fill='none' stroke='%23A89080' stroke-width='1.5' opacity='0.3'/%3E%3C/svg%3E\")",
           pointerEvents: 'none'
         }}
         variants={floatSlow}
@@ -56,7 +56,7 @@ export default function HeroSection() {
         className="absolute top-1/4 right-8 lg:right-20 w-[340px] h-[420px] rounded-3xl overflow-hidden opacity-[0.08] hidden md:block"
         style={{
           background: 'rgba(255,255,255,0.02)',
-          border: '1px solid rgba(149,113,88,0.08)',
+          border: '1px solid rgba(168,144,128,0.08)',
           backdropFilter: 'blur(10px)'
         }}
         variants={imageFloat}
@@ -66,8 +66,8 @@ export default function HeroSection() {
       <motion.div
         className="absolute top-1/3 right-12 lg:right-24 w-[280px] h-[340px] rounded-3xl overflow-hidden hidden lg:block"
         style={{
-          background: 'rgba(149,113,88,0.03)',
-          border: '1px solid rgba(149,113,88,0.12)',
+          background: 'rgba(168,144,128,0.03)',
+          border: '1px solid rgba(168,144,128,0.12)',
           backdropFilter: 'blur(15px)'
         }}
         variants={imageFloat}
@@ -94,7 +94,7 @@ export default function HeroSection() {
       />
       <motion.div
         className="absolute top-1/3 right-12 lg:right-24 w-[280px] h-[340px] rounded-3xl overflow-hidden hidden lg:block"
-        style={{ background: 'rgba(149,113,88,0.06)', border: '1px solid rgba(149,113,88,0.12)' }}
+        style={{ background: 'rgba(168,144,128,0.06)', border: '1px solid rgba(168,144,128,0.12)' }}
         variants={imageFloat}
         initial="rest"
         animate="float"
@@ -181,17 +181,17 @@ export default function HeroSection() {
             </Link>
           </motion.div>
 
-          {/* Elegant decorative divider */}
+          {/* Elegant decorative divider with cake emoji */}
           <motion.div
             custom={4}
             variants={heroTextReveal}
             initial="hidden"
             animate="visible"
             className="flex items-center gap-6 mt-16 pt-10"
-            style={{ borderTop: '1px solid rgba(149,113,88,0.15)' }}
+            style={{ borderTop: '1px solid rgba(168,144,128,0.15)' }}
           >
             <div className="w-[60px] h-[1px] bg-[var(--peach)]/30" />
-            <span className="font-serif text-[var(--peach)] text-lg">✦ ✦ ✦</span>
+            <span className="font-serif text-[var(--peach)] text-xl">🎂</span>
             <div className="w-[60px] h-[1px] bg-[var(--peach)]/30" />
           </motion.div>
 
@@ -203,21 +203,21 @@ export default function HeroSection() {
             animate="visible"
             className="flex flex-wrap items-center gap-8 mt-12"
             style={{
-              background: 'rgba(255,255,255,0.3)',
+              background: 'rgba(212,169,160,0.1)',
               backdropFilter: 'blur(10px)',
               borderRadius: '2rem',
-              padding: '1rem 1.5rem'
+              padding: '1rem 1.5rem',
+              border: '1px solid rgba(168,144,128,0.2)'
             }}
           >
             {[
-              { value: '500+', label: 'Cakes Delivered', icon: <Cake size={16} /> },
-              { value: '4.9★', label: 'Customer Rating', icon: <Star size={16} /> },
-              { value: '6yrs', label: 'Years of Craft', icon: <BookOpen size={16} /> },
-              { value: 'CIC', label: 'Community Impact', icon: <Heart size={16} /> },
+              { value: '500+', label: 'Cakes Made', icon: '🎂' },
+              { value: '4.9★', label: 'Rating', icon: '⭐' },
+              { value: '6yrs', label: 'Crafting', icon: '👩‍🍳' },
+              { value: 'CIC', label: 'Community', icon: '❤️' },
             ].map(({ value, label, icon }) => (
               <div key={label} className="flex items-center gap-3">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full"
-                     style={{ background: 'var(--peach)', color: 'white' }}>
+                <div className="text-2xl">
                   {icon}
                 </div>
                 <div className="text-center">
