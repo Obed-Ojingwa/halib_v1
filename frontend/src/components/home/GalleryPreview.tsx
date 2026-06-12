@@ -44,7 +44,7 @@ export default function GalleryPreview() {
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-[160px] h-[160px] rounded-full opacity-[0.06] hidden lg:block"
              style={{
-               background: 'radial-gradient(circle at 30% 30%, rgba(212,163,115,0.1), transparent 70%)',
+               background: 'radial-gradient(circle at 30% 30%, rgba(149,113,88,0.1), transparent 70%)',
                transform: 'translate(-20%, -20%)'
              }}
              variants={floatSlow}
@@ -54,7 +54,7 @@ export default function GalleryPreview() {
         />
         <div className="absolute bottom-0 right-0 w-[140px] h-[140px] rounded-full opacity-[0.04] hidden lg:block"
              style={{
-               background: 'radial-gradient(circle at 70% 70%, rgba(248,169,116,0.08), transparent 70%)',
+               background: 'radial-gradient(circle at 70% 70%, rgba(149,113,88,0.08), transparent 70%)',
                transform: 'translate(20%, 20%)'
              }}
              variants={floatSlow}
@@ -124,7 +124,7 @@ export default function GalleryPreview() {
                 className={`group relative rounded-3xl overflow-hidden cursor-pointer ${spanClass}`}
                 style={{
                   background: fallback,
-                  border: '1px solid rgba(212,163,115,0.1)'
+                  border: '1px solid rgba(149,113,88,0.1)'
                 }}
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.4 }}
@@ -146,7 +146,7 @@ export default function GalleryPreview() {
                   style={{
                     background: 'rgba(255,255,255,0.1)',
                     backdropFilter: 'blur(5px)',
-                    border: '1px solid rgba(212,163,115,0.2)'
+                    border: '1px solid rgba(149,113,88,0.2)'
                   }}
                 >
                   <div className="flex flex-col items-center">
@@ -162,7 +162,7 @@ export default function GalleryPreview() {
                   style={{
                     background: 'rgba(255,255,255,0.85)',
                     backdropFilter: 'blur(5px)',
-                    border: '1px solid rgba(212,163,115,0.15)',
+                    border: '1px solid rgba(149,113,88,0.15)',
                     color: 'var(--text-secondary)'
                   }}
                 >
@@ -188,10 +188,10 @@ export default function GalleryPreview() {
             className="inline-flex items-center gap-3 font-sans text-sm font-medium transition-colors hover:text-[var(--peach)]"
             style={{
               color: 'var(--text-secondary)',
-              background: 'rgba(212,163,115,0.08)',
+              background: 'rgba(149,113,88,0.08)',
               padding: '0.75rem 1.5rem',
               borderRadius: '12px',
-              border: '1px solid rgba(212,163,115,0.2)'
+              border: '1px solid rgba(149,113,88,0.2)'
             }}
           >
             <Instagram size={20} />

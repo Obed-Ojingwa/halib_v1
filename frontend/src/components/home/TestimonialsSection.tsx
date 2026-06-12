@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-[180px] h-[180px] rounded-full opacity-[0.08] hidden lg:block"
              style={{
-               background: 'radial-gradient(circle at 30% 30%, rgba(212,163,115,0.15), transparent 70%)',
+               background: 'radial-gradient(circle at 30% 30%, rgba(149,113,88,0.15), transparent 70%)',
                transform: 'translate(-20%, -20%)'
              }}
              variants={floatSlow}
@@ -53,7 +53,7 @@ export default function TestimonialsSection() {
         />
         <div className="absolute bottom-0 right-0 w-[200px] h-[200px] rounded-full opacity-[0.06] hidden lg:block"
              style={{
-               background: 'radial-gradient(circle at 70% 70%, rgba(248,169,116,0.12), transparent 70%)',
+               background: 'radial-gradient(circle at 70% 70%, rgba(149,113,88,0.12), transparent 70%)',
                transform: 'translate(20%, 20%)'
              }}
              variants={floatSlow}
@@ -96,14 +96,14 @@ export default function TestimonialsSection() {
               {/* Testimonial Card */}
               <div className="relative bg-white rounded-2xl p-8 shadow-luxury transition-all duration-500 hover:shadow-luxury-lg"
                    style={{
-                     border: '1px solid rgba(212,163,115,0.15)',
+                     border: '1px solid rgba(149,113,88,0.15)',
                      background: 'linear-gradient(to bottom right, white, rgba(248,244,240,0.8))'
                    }}
               >
                 {/* Quote Icon */}
                 <div className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full"
                      style={{
-                       background: 'rgba(212,163,115,0.1)',
+                       background: 'rgba(149,113,88,0.1)',
                        color: 'var(--peach)'
                      }}>
                   <Quote size={16} />
@@ -120,8 +120,8 @@ export default function TestimonialsSection() {
                   ) : (
                     <div className="w-24 h-24 rounded-full flex items-center justify-center"
                          style={{
-                           background: 'linear-gradient(135deg, rgba(212,163,115,0.1) 0%, rgba(248,169,116,0.05) 100%)',
-                           border: '2px dashed rgba(212,163,115,0.3)'
+                           background: 'linear-gradient(135deg, rgba(149,113,88,0.1) 0%, rgba(149,113,88,0.05) 100%)',
+                           border: '2px dashed rgba(149,113,88,0.3)'
                          }}>
                       <Heart size={18} style={{ color: 'var(--peach)', opacity: 0.8 }} />
                     </div>
@@ -147,7 +147,7 @@ export default function TestimonialsSection() {
               {/* Decorative accent */}
               <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full"
                    style={{
-                     background: 'linear-gradient(135deg, var(--peach) 0%, rgba(212,163,115,0.3) 100%)',
+                     background: 'linear-gradient(135deg, var(--peach) 0%, rgba(149,113,88,0.3) 100%)',
                      transform: 'rotate(45deg)',
                      opacity: '0.7'
                    }}
@@ -165,7 +165,7 @@ export default function TestimonialsSection() {
         <motion.div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120px] h-[80px] opacity-[0.04] hidden lg:block"
           style={{
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 100 50\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M5,45 Q15,35 25,40 T45,45 Q55,35 65,40 T85,45 Q95,35 95,25 L95,5 L5,5 Z\' fill=\'none\' stroke=\'%23D4A373\' stroke-width=\'1.5\' opacity=\'0.4\'/%3E%3C/svg%3E\")'
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 100 50\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M5,45 Q15,35 25,40 T45,45 Q55,35 65,40 T85,45 Q95,35 95,25 L95,5 L5,5 Z\' fill=\'none\' stroke=\'%23957158\' stroke-width=\'1.5\' opacity=\'0.4\'/%3E%3C/svg%3E\")'
           }}
           variants={floatSlow}
           initial="rest"

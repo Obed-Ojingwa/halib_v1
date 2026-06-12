@@ -31,7 +31,7 @@ export default function CategoryFilter({ active, onChange }: Props) {
               background: isActive ? 'var(--peach)'  : '#FDF7F2',
               color:      isActive ? 'white'          : 'var(--text-secondary)',
               border:     `1.5px solid ${isActive ? 'var(--peach)' : '#E0D0C5'}`,
-              boxShadow:  isActive ? '0 4px 14px rgba(248,169,116,0.35)' : 'none',
+              boxShadow:  isActive ? '0 4px 14px rgba(149,113,88,0.35)' : 'none',
             }}
           >
             <span aria-hidden>{emoji}</span>

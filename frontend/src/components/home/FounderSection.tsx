@@ -29,7 +29,7 @@ export default function FounderSection() {
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-[200px] h-[200px] rounded-full opacity-[0.08] hidden lg:block"
              style={{
-               background: 'radial-gradient(circle at 30% 30%, rgba(212,163,115,0.15), transparent 70%)',
+               background: 'radial-gradient(circle at 30% 30%, rgba(149,113,88,0.15), transparent 70%)',
                transform: 'translate(-20%, -20%)'
              }}
              variants={floatSlow}
@@ -39,7 +39,7 @@ export default function FounderSection() {
         />
         <div className="absolute bottom-0 right-0 w-[180px] h-[180px] rounded-full opacity-[0.06] hidden lg:block"
              style={{
-               background: 'radial-gradient(circle at 70% 70%, rgba(248,169,116,0.12), transparent 70%)',
+               background: 'radial-gradient(circle at 70% 70%, rgba(149,113,88,0.12), transparent 70%)',
                transform: 'translate(20%, 20%)'
              }}
              variants={floatSlow}
@@ -64,7 +64,7 @@ export default function FounderSection() {
               className="relative aspect-[4/5] rounded-[3rem] overflow-hidden"
               style={{
                 background: 'var(--cream)',
-                border: '2px solid rgba(212,163,115,0.2)'
+                border: '2px solid rgba(149,113,88,0.2)'
               }}
             >
               {portraitUrl ? (
@@ -80,7 +80,7 @@ export default function FounderSection() {
                   <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4"
                            style={{
                              background: 'var(--peach)',
-                             boxShadow: '0 4px 12px rgba(212,163,115,0.3)'
+                             boxShadow: '0 4px 12px rgba(149,113,88,0.3)'
                            }}>
                     <Heart size={24} style={{ color: 'white' }} />
                   </div>
@@ -196,7 +196,7 @@ export default function FounderSection() {
         <motion.div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[160px] h-[100px] opacity-[0.05] hidden lg:block"
           style={{
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 100 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M5,55 Q15,35 25,45 T45,55 Q55,35 65,45 T85,55 Q95,35 95,25 L95,5 L5,5 Z\' fill=\'none\' stroke=\'%23D4A373\' stroke-width=\'1.5\' opacity=\'0.3\'/%3E%3C/svg%3E\")'
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 100 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M5,55 Q15,35 25,45 T45,55 Q55,35 65,45 T85,55 Q95,35 95,25 L95,5 L5,5 Z\' fill=\'none\' stroke=\'%23957158\' stroke-width=\'1.5\' opacity=\'0.3\'/%3E%3C/svg%3E\")'
           }}
           variants={floatSlow}
           initial="rest"

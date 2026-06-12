@@ -451,7 +451,7 @@ export default function AdminDashboard() {
           {NAV.map(({ label, href, icon }) => (
             <NavLink key={href} to={href} end={href === '/admin'} onClick={() => setOpen(false)}
               className={({ isActive }) => `flex items-center gap-3 px-4 py-3 rounded-xl font-sans text-sm font-medium transition-all ${isActive ? '' : 'hover:bg-white/5'}`}
-              style={({ isActive }) => ({ background: isActive?'rgba(248,169,116,0.15)':'transparent', color: isActive?'var(--peach)':'rgba(255,255,255,0.55)' })}>
+              style={({ isActive }) => ({ background: isActive?'rgba(149,113,88,0.15)':'transparent', color: isActive?'var(--peach)':'rgba(255,255,255,0.65)' })}>
               {icon}{label}
             </NavLink>
           ))}
@@ -949,7 +949,7 @@ export default function AdminDashboard() {
 //           {NAV.map(({ label, href, icon }) => (
 //             <NavLink key={href} to={href} end={href === '/admin'} onClick={() => setOpen(false)}
 //               className={({ isActive }) => `flex items-center gap-3 px-4 py-3 rounded-xl font-sans text-sm font-medium transition-all ${isActive ? '' : 'hover:bg-white/5'}`}
-//               style={({ isActive }) => ({ background: isActive?'rgba(248,169,116,0.15)':'transparent', color: isActive?'var(--peach)':'rgba(255,255,255,0.55)' })}>
+//               style={({ isActive }) => ({ background: isActive?'rgba(149,113,88,0.15)':'transparent', color: isActive?'var(--peach)':'rgba(255,255,255,0.65)' })}>
 //               {icon}{label}
 //             </NavLink>
 //           ))}
@@ -1177,8 +1177,8 @@ export default function AdminDashboard() {
 //                 }`
 //               }
 //               style={({ isActive }) => ({
-//                 background: isActive ? 'rgba(248,169,116,0.15)' : 'transparent',
-//                 color:      isActive ? 'var(--peach)' : 'rgba(255,255,255,0.55)',
+//                 background: isActive ? 'rgba(149,113,88,0.15)' : 'transparent',
+//                 color:      isActive ? 'var(--peach)' : 'rgba(255,255,255,0.65)',
 //               })}
 //             >
 //               {icon}{label}

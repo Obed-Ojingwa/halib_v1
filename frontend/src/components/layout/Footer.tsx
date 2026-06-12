@@ -27,7 +27,7 @@ const FOOTER_NAV = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#000000' }} className="relative">
+    <footer style={{ background: 'var(--text-primary)' }} className="relative">
 
       {/* Top band */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
@@ -36,14 +36,14 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <p className="font-serif font-bold" style={{ fontSize: 'clamp(1.5rem,3vw,2rem)', color: '#FFFFFF' }}>
+              <p className="font-serif font-bold" style={{ fontSize: 'clamp(1.5rem,3vw,2rem)', color: 'var(--cream-white)' }}>
                 Haliberry Cake
               </p>
               <p className="font-sans text-xs tracking-[0.2em] uppercase mt-1" style={{ color: 'var(--peach)' }}>
                 London · Est. 2020
               </p>
             </div>
-            <p className="font-sans text-sm leading-relaxed" style={{ color: '#E0E0E0' }}>
+            <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--cream-white)' }}>
               More than cake — a story of strength, healing, and creativity.
               Luxury celebration cakes, dessert boxes, baking classes, and community empowerment in London.
             </p>
@@ -55,7 +55,7 @@ export default function Footer() {
                 { icon: <Mail size={14}/>,  text: 'Haliberry2016@gmail.com' },
                 { icon: <MapPin size={14}/>, text: 'London, United Kingdom' },
               ].map(({ icon, text }) => (
-                <div key={text} className="flex items-center gap-2.5 font-sans text-sm" style={{ color: '#E0E0E0' }}>
+                <div key={text} className="flex items-center gap-2.5 font-sans text-sm" style={{ color: 'var(--cream-white)' }}>
                   <span style={{ color: 'var(--peach)' }}>{icon}</span>
                   {text}
                 </div>
@@ -77,7 +77,7 @@ export default function Footer() {
                       rel="noopener noreferrer"
                       aria-label={label}
                       className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
-                      style={{ background: 'rgba(212,163,115,0.2)', border: '1px solid rgba(212,163,115,0.3)' }}
+                      style={{ background: 'rgba(149,113,88,0.18)', border: '1px solid rgba(149,113,88,0.3)' }}
                     >
                       <Icon size={16} style={{ color: 'var(--peach)' }} />
                     </a>
@@ -89,7 +89,7 @@ export default function Footer() {
                       rel="noopener noreferrer"
                       aria-label={label}
                       className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
-                      style={{ background: 'rgba(212,163,115,0.2)', border: '1px solid rgba(212,163,115,0.3)' }}
+                      style={{ background: 'rgba(149,113,88,0.18)', border: '1px solid rgba(149,113,88,0.3)' }}
                     >
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style={{ color: 'var(--peach)' }}>
                         <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.07a8.14 8.14 0 004.78 1.52V7.15a4.85 4.85 0 01-1.01-.46z"/>
@@ -104,7 +104,7 @@ export default function Footer() {
           {/* Nav columns */}
           {FOOTER_NAV.map(({ group, links }) => (
             <div key={group}>
-              <p className="font-sans text-xs font-semibold tracking-[0.18em] uppercase mb-4" style={{ color: '#FFFFFF' }}>
+              <p className="font-sans text-xs font-semibold tracking-[0.18em] uppercase mb-4" style={{ color: 'var(--cream-white)' }}>
                 {group}
               </p>
               <ul className="space-y-2">
@@ -113,7 +113,7 @@ export default function Footer() {
                     <Link
                       to={href}
                       className="font-sans text-sm transition-colors duration-200 hover:text-[var(--peach)]"
-                      style={{ color: '#E0E0E0' }}
+                      style={{ color: 'var(--cream-white)' }}
                     >
                       {label}
                     </Link>
@@ -128,10 +128,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-[var(--peach)]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-sans text-xs" style={{ color: '#E0E0E0' }}>
+          <p className="font-sans text-xs" style={{ color: 'var(--cream-white)' }}>
             © {new Date().getFullYear()} Haliberry Cake Ltd. All rights reserved. Registered in England & Wales.
           </p>
-          <p className="font-sans text-xs flex items-center gap-1" style={{ color: '#E0E0E0' }}>
+          <p className="font-sans text-xs flex items-center gap-1" style={{ color: 'var(--cream-white)' }}>
             Made with <Heart size={11} fill="var(--peach)" style={{ color: 'var(--peach)' }} /> in London
           </p>
         </div>

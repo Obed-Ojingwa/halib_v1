@@ -30,7 +30,7 @@ export default function Navbar() {
   useEffect(() => setMenuOpen(false), [location])
 
   const navBg = scrolled || !isHome
-    ? 'bg-white/95 backdrop-blur-md shadow-luxury-sm'
+    ? 'bg-[var(--cream-white)]/95 backdrop-blur-md shadow-luxury-sm'
     : 'bg-transparent'
 
   return (
@@ -45,7 +45,7 @@ export default function Navbar() {
             className="font-serif font-bold tracking-tight"
             style={{
               fontSize: 'clamp(1.25rem, 3vw, 1.6rem)',
-              color: scrolled || !isHome ? 'var(--text-primary)' : 'white',
+              color: 'var(--text-primary)',
             }}
           >
             Haliberry
@@ -54,7 +54,7 @@ export default function Navbar() {
             className="font-sans tracking-[0.18em] uppercase"
             style={{
               fontSize: '0.55rem',
-              color: scrolled || !isHome ? 'var(--peach)' : 'rgba(255,255,255,0.8)',
+              color: scrolled || !isHome ? 'var(--peach)' : 'rgba(255,255,255,0.85)',
             }}
           >
             Cake · London
@@ -71,9 +71,7 @@ export default function Navbar() {
                   `font-sans text-sm font-medium tracking-wide transition-colors duration-200 ${
                     isActive
                       ? 'text-[var(--peach)]'
-                      : scrolled || !isHome
-                        ? 'text-[var(--text-secondary)] hover:text-[var(--peach)]'
-                        : 'text-white/90 hover:text-white'
+                      : 'text-[var(--text-secondary)] hover:text-[var(--peach)]'
                   }`
                 }
               >
@@ -114,7 +112,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md shadow-luxury-lg border-t border-cream"
+            className="lg:hidden absolute top-full left-0 right-0 bg-[var(--cream-white)]/98 backdrop-blur-md shadow-luxury-lg border-t border-[var(--cream)]"
           >
             <ul className="px-6 py-6 flex flex-col gap-4">
               {NAV_LINKS.map(({ label, href }) => (

@@ -87,7 +87,7 @@ export default function CICImpactSection() {
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
-                  style={{ background: 'rgba(248,169,116,0.15)' }}
+                  style={{ background: 'rgba(149,113,88,0.15)' }}
                 >
                   <span style={{ color: 'var(--peach)' }}>{icon}</span>
                 </div>
