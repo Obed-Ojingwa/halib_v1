@@ -1,3 +1,4 @@
+// C:\Users\Melody\Documents\Version_1\haliberrycake\frontend\src\pages\Gallery.tsx
 import { motion } from 'framer-motion'
 import { Image as LucideImage, Camera, Heart } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
@@ -17,7 +18,75 @@ export default function Gallery() {
   return (
     <>
     <WhatsAppFloatButton />
-      <section className="pt-32 pb-20 relative overflow-hidden bg-white border-b border-black/10">
+
+    <section className="relative bg-white border-b border-black/10 overflow-hidden">
+  {/* Background Effect */}
+  <div
+    className="absolute inset-0 opacity-10 pointer-events-none"
+    style={{
+      backgroundImage:
+        'radial-gradient(circle at 50% 50%, rgba(0,0,0,0.05), transparent 65%)',
+    }}
+  />
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-24 md:py-28 text-center">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        className="max-w-3xl mx-auto"
+      >
+        <motion.span
+          className="font-sans text-xs tracking-[0.22em] uppercase block mb-4"
+          style={{ color: 'var(--peach)' }}
+        >
+          Our Work
+        </motion.span>
+
+        <motion.h1
+          className="font-serif font-semibold text-black mb-6"
+          style={{
+            fontSize: 'clamp(2.5rem,5vw,4.5rem)',
+            lineHeight: '1.1',
+          }}
+        >
+          Gallery <br />
+          <em
+            className="not-italic"
+            style={{ color: 'var(--peach)' }}
+          >
+            Of Creations
+          </em>
+        </motion.h1>
+
+        <motion.p
+          className="font-sans font-light max-w-2xl mx-auto"
+          style={{
+            color: 'rgba(0,0,0,0.65)',
+            fontSize: '1.05rem',
+          }}
+        >
+          A showcase of our custom cakes, baking classes, and community
+          moments.
+        </motion.p>
+      </motion.div>
+    </div>
+  </div>
+
+  {/* Bottom Wave */}
+  <svg
+    viewBox="0 0 1440 60"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="block w-full"
+  >
+    <path
+      d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z"
+      fill="white"
+    />
+  </svg>
+</section>
+      {/* <section className="pt-32 pb-20 relative overflow-hidden bg-white border-b border-black/10">
         <div className="absolute inset-0 opacity-10 pointer-events-none"
         // Changed background gradient colors here, keeping the same general style
           style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0,0,0,0.05), transparent 65%)' }}/>
@@ -37,7 +106,7 @@ export default function Gallery() {
           style={{ display: 'block', width: '100%', position: 'absolute', bottom: 0 }}>
           <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="white"/>
         </svg>
-      </section>
+      </section> */}
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
