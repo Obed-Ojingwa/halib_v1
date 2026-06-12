@@ -147,17 +147,18 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Decorative accent */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full"
-                   style={{
-                     background: 'linear-gradient(135deg, var(--peach) 0%, rgba(149,113,88,0.3) 100%)',
-                     transform: 'rotate(45deg)',
-                     opacity: '0.7'
-                   }}
-                   variants={{
-                     rest: { scale: 1 },
-                     float: { scale: [1, 1.1, 1] }
-                   }}
-                   transition={{ duration: 3, repeat: Infinity }}
+              <motion.div
+                className="absolute -top-4 -left-4 w-8 h-8 rounded-full"
+                style={{
+                  background: 'linear-gradient(135deg, var(--peach) 0%, rgba(149,113,88,0.3) 100%)',
+                  transform: 'rotate(45deg)',
+                  opacity: '0.7'
+                }}
+                variants={{
+                  rest: { scale: 1 },
+                  float: { scale: [1, 1.1, 1] }
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
               />
             </motion.div>
           ))}
