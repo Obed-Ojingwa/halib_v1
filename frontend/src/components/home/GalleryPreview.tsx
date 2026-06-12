@@ -1,10 +1,10 @@
 // C:\Users\Melody\Documents\haliberrycake\frontend\src\components\home\GalleryPreview.tsx
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Instagram } from 'lucide-react'
+import { ArrowRight, Instagram, Heart } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
 import { galleryApi } from '@/lib/api'
-import { fadeUp, staggerContainer } from '@/lib/animations'
+import { fadeUp, staggerContainer, floatSlow } from '@/lib/animations'
 import type { GalleryItem } from '@/types'
 
 // Elegant fallback gradients for when images aren't available
@@ -42,25 +42,27 @@ export default function GalleryPreview() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-[160px] h-[160px] rounded-full opacity-[0.06] hidden lg:block"
-             style={{
-               background: 'radial-gradient(circle at 30% 30%, rgba(149,113,88,0.1), transparent 70%)',
-               transform: 'translate(-20%, -20%)'
-             }}
-             variants={floatSlow}
-             initial="rest"
-             animate="float"
-             transition={{ delay: 0.5 }}
+        <motion.div
+          className="absolute top-0 left-0 w-[160px] h-[160px] rounded-full opacity-[0.06] hidden lg:block"
+          style={{
+            background: 'radial-gradient(circle at 30% 30%, rgba(149,113,88,0.1), transparent 70%)',
+            transform: 'translate(-20%, -20%)'
+          }}
+          variants={floatSlow}
+          initial="rest"
+          animate="float"
+          transition={{ delay: 0.5 }}
         />
-        <div className="absolute bottom-0 right-0 w-[140px] h-[140px] rounded-full opacity-[0.04] hidden lg:block"
-             style={{
-               background: 'radial-gradient(circle at 70% 70%, rgba(149,113,88,0.08), transparent 70%)',
-               transform: 'translate(20%, 20%)'
-             }}
-             variants={floatSlow}
-             initial="rest"
-             animate="float"
-             transition={{ delay: 1.2 }}
+        <motion.div
+          className="absolute bottom-0 right-0 w-[140px] h-[140px] rounded-full opacity-[0.04] hidden lg:block"
+          style={{
+            background: 'radial-gradient(circle at 70% 70%, rgba(149,113,88,0.08), transparent 70%)',
+            transform: 'translate(20%, 20%)'
+          }}
+          variants={floatSlow}
+          initial="rest"
+          animate="float"
+          transition={{ delay: 1.2 }}
         />
 
         {/* Header */}

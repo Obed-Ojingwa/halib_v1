@@ -1,10 +1,10 @@
 // C:\Users\Melody\Documents\haliberrycake\frontend\src\components\home\FounderSection.tsx
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Heart } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
-import { fadeLeft, fadeRight, staggerContainer } from '@/lib/animations'
+import { fadeLeft, fadeRight, staggerContainer, floatSlow } from '@/lib/animations'
 
 interface SiteSetting { key: string; image_url: string | null }
 
@@ -27,25 +27,27 @@ export default function FounderSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-[200px] h-[200px] rounded-full opacity-[0.08] hidden lg:block"
-             style={{
-               background: 'radial-gradient(circle at 30% 30%, rgba(149,113,88,0.15), transparent 70%)',
-               transform: 'translate(-20%, -20%)'
-             }}
-             variants={floatSlow}
-             initial="rest"
-             animate="float"
-             transition={{ delay: 0.5 }}
+        <motion.div
+          className="absolute top-0 left-0 w-[200px] h-[200px] rounded-full opacity-[0.08] hidden lg:block"
+          style={{
+            background: 'radial-gradient(circle at 30% 30%, rgba(149,113,88,0.15), transparent 70%)',
+            transform: 'translate(-20%, -20%)'
+          }}
+          variants={floatSlow}
+          initial="rest"
+          animate="float"
+          transition={{ delay: 0.5 }}
         />
-        <div className="absolute bottom-0 right-0 w-[180px] h-[180px] rounded-full opacity-[0.06] hidden lg:block"
-             style={{
-               background: 'radial-gradient(circle at 70% 70%, rgba(149,113,88,0.12), transparent 70%)',
-               transform: 'translate(20%, 20%)'
-             }}
-             variants={floatSlow}
-             initial="rest"
-             animate="float"
-             transition={{ delay: 1.2 }}
+        <motion.div
+          className="absolute bottom-0 right-0 w-[180px] h-[180px] rounded-full opacity-[0.06] hidden lg:block"
+          style={{
+            background: 'radial-gradient(circle at 70% 70%, rgba(149,113,88,0.12), transparent 70%)',
+            transform: 'translate(20%, 20%)'
+          }}
+          variants={floatSlow}
+          initial="rest"
+          animate="float"
+          transition={{ delay: 1.2 }}
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
